@@ -13,8 +13,8 @@ export default function Index() {
 
   useEffect(() => {
     // Train the model
-    const xs = tf.tensor2d([-1, 0, 1, 2, 3, 4], [6, 1]);
-    const ys = tf.tensor2d([-3, -1, 1, 3, 5, 7], [6, 1]);
+    const xs = tf.tensor2d([1, 2, 3, 4, 5, 6], [6, 1]);
+    const ys = tf.tensor2d([1, 4, 9, 16, 25, 36], [6, 1]);
     model.fit(xs, ys, { epochs: 500 }).then(() => {
       setProcessing(false);
     });
